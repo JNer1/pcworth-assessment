@@ -49,4 +49,16 @@ class ProductController extends Controller
             'data' => $product
         ]);
     }
+
+    public function destroy($id): JsonResponse
+    {
+        $product = Product::findOrFail($id);
+        $product->delete();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Product deleted successfully.',
+            'data'    => null,
+        ]);
+    }
 }
