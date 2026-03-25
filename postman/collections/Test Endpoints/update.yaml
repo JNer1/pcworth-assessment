@@ -1,0 +1,14 @@
+$kind: http-request
+name: http://127.0.0.1:8000/api/products/4
+url: http://127.0.0.1:8000/api/products/4
+method: PUT
+body:
+  type: json
+  content: |2-
+      {
+            "name": "Razer Viper V3 Pro",
+            "description": "Small gaming mouse for claw grip.",
+            "price": "4500",
+            "stock": "4"
+        }
+order: 4173992138425827

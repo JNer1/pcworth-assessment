@@ -1,0 +1,5 @@
+$kind: http-request
+name: http://127.0.0.1:8000/api/products
+url: http://127.0.0.1:8000/api/products
+method: GET
+order: 1774458351652

@@ -1,0 +1,14 @@
+$kind: http-request
+name: http://127.0.0.1:8000/api/products
+url: http://127.0.0.1:8000/api/products
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "name": "Lamzu Maya",
+        "description": "Small gaming mouse for claw grip.",
+        "price": "4500",
+        "stock": "4"
+    }
+order: 2293500232938144
