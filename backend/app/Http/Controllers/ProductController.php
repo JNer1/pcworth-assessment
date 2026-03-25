@@ -14,6 +14,8 @@ class ProductController extends Controller
         $products = Product::select('name', 'price', 'stock')->get();
 
         return response()->json([
+            'success' => true,
+            'message' => 'Successfully retrieved products',
             'data' => $products
         ]);
     }
@@ -23,6 +25,8 @@ class ProductController extends Controller
         $product = Product::select('name', 'price', 'stock')->findOrFail($id);
 
         return response()->json([
+            'success' => true,
+            'message' => 'Successfully retrieved product',
             'data' => $product
         ]);
     }
