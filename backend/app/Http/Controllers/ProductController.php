@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 use App\Models\Product;
 use Illuminate\Http\JsonResponse;
 
@@ -37,13 +38,14 @@ class ProductController extends Controller
         ]);
     }
 
-    public function update(StoreProductRequest $request): JsonResponse
+    public function update(UpdateProductRequest $request, $id): JsonResponse
     {
-        $product = Product::findOrFail(i);
+        $product = Product::findOrFail($id);
+        $product->update($request->validated());
 
         return response()->json([
             'success' => true,
-            'message' => 'Successfully created product',
+            'message' => 'Successfully updated product',
             'data' => $product
         ]);
     }
