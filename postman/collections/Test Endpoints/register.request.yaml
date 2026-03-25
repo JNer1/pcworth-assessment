@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://127.0.0.1:8000/api/register
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "name": "Javier",
+        "email": "javierignatio.neri@gmail.com",
+        "password": "test123",
+        "password_confirmation": "test123"
+    }
+order: 4391795239080987
