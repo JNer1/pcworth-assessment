@@ -1,0 +1,20 @@
+$kind: http-request
+name: Create Product
+url: "{{base_url}}/products"
+method: POST
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Accept
+    value: application/json
+  - name: Authorization
+    value: "Bearer {{token}}"
+body:
+  type: json
+  content: |-
+    {
+      "name": "Sample Product",
+      "description": "A great product.",
+      "price": 19.99,
+      "stock": 50
+    }

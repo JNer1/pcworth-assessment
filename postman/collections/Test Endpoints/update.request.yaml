@@ -1,5 +1,5 @@
 $kind: http-request
-name: http://127.0.0.1:8000/api/products/4
+name: update
 url: http://127.0.0.1:8000/api/products/4
 method: PUT
 body:

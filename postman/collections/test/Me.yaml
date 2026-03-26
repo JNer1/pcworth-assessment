@@ -1,0 +1,9 @@
+$kind: http-request
+name: Me
+url: "{{base_url}}/me"
+method: GET
+headers:
+  - name: Accept
+    value: application/json
+  - name: Authorization
+    value: "Bearer {{token}}"

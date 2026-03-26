@@ -1,0 +1,9 @@
+$kind: http-request
+name: Delete Product
+url: "{{base_url}}/products/1"
+method: DELETE
+headers:
+  - name: Accept
+    value: application/json
+  - name: Authorization
+    value: "Bearer {{token}}"

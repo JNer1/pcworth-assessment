@@ -2,6 +2,9 @@ $kind: http-request
 name: register
 url: http://127.0.0.1:8000/api/register
 method: POST
+headers:
+  - key: Accept
+    value: application/json
 body:
   type: json
   content: |-
@@ -11,4 +14,12 @@ body:
         "password": "test123456",
         "password_confirmation": "test123456"
     }
+scripts:
+  - type: afterResponse
+    code: |-
+      const res = pm.response.json();
+          if (res.data && res.data.access_token) {
+            pm.collectionVariables.set("token", res.data.access_token);
+          }
+    language: text/javascript
 order: 4391795239080987

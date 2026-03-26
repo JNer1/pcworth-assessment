@@ -1,0 +1,9 @@
+$kind: http-request
+name: Logout
+url: "{{base_url}}/logout"
+method: POST
+headers:
+  - name: Accept
+    value: application/json
+  - name: Authorization
+    value: "Bearer {{token}}"

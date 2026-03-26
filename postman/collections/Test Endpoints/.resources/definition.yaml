@@ -1,2 +1,10 @@
 $kind: collection
 name: Test Endpoints
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{token}}'
+variables:
+  - key: token
+    value: ""

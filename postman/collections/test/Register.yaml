@@ -1,0 +1,24 @@
+$kind: http-request
+name: Register
+url: "{{base_url}}/register"
+method: POST
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Accept
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "Demo User",
+      "email": "demo@example.com",
+      "password": "password123",
+      "password_confirmation": "password123"
+    }
+scripts:
+  post-response: |-
+    const res = pm.response.json();
+    if (res.data && res.data.access_token) {
+      pm.collectionVariables.set("token", res.data.access_token);
+    }

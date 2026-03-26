@@ -1,5 +1,9 @@
 $kind: http-request
-name: http://127.0.0.1:8000/api/products
+name: index
 url: http://127.0.0.1:8000/api/products
 method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
 order: 1774458351652

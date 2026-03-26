@@ -1,0 +1,18 @@
+$kind: http-request
+name: Update Product
+url: "{{base_url}}/products/1"
+method: PUT
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Accept
+    value: application/json
+  - name: Authorization
+    value: "Bearer {{token}}"
+body:
+  type: json
+  content: |-
+    {
+      "price": 29.99,
+      "stock": 100
+    }
