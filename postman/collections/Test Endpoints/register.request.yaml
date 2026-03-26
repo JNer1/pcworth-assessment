@@ -1,4 +1,5 @@
 $kind: http-request
+name: register
 url: http://127.0.0.1:8000/api/register
 method: POST
 body:
@@ -7,7 +8,7 @@ body:
     {
         "name": "Javier",
         "email": "javierignatio.neri@gmail.com",
-        "password": "test123",
-        "password_confirmation": "test123"
+        "password": "test123456",
+        "password_confirmation": "test123456"
     }
 order: 4391795239080987
